@@ -1,4 +1,4 @@
-class ALData:
+class SGData:
     def __init__(self, *args, **kwargs) -> None:
         self.id = None
         self.dimension = None
@@ -8,7 +8,7 @@ class ALData:
         raise NotImplementedError
 
 
-class Audio(ALData):
+class Audio(SGData):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.sample_rate = None
@@ -18,7 +18,7 @@ class Audio(ALData):
         pass
 
 
-class CarnivalRTS(ALData):
+class CarnivalRTS(SGData):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.frame_rate = None
@@ -28,7 +28,7 @@ class CarnivalRTS(ALData):
         pass
 
 
-class CarnivalSEG(ALData):
+class CarnivalSEG(SGData):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.labels = None
@@ -37,7 +37,7 @@ class CarnivalSEG(ALData):
         pass
 
 
-class String(ALData):
+class String(SGData):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
@@ -45,7 +45,7 @@ class String(ALData):
         pass
 
 
-class Custom(ALData):
+class Custom(SGData):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
