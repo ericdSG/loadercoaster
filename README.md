@@ -12,7 +12,7 @@ Clone the repo, navigate to the top-level directory, and:
 
 1. Create a new conda environment `loadercoaster` with dependencies from `environment.yml`
     ```bash
-    mamba env create && mamba activate trainer
+    mamba env create && mamba activate loadercoaster
     ```
 
 1. Enable pre-commit hooks
