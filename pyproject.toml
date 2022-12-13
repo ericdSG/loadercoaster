@@ -1,0 +1,9 @@
+[project]
+name = "loadercoaster"
+version = "0.0.1"
+
+[tool.black]
+line-length = 80
+
+[tool.isort]
+profile = "black"
