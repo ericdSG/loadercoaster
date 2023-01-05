@@ -1,4 +1,4 @@
-class SGData:
+class Label:
     def __init__(self, *args, **kwargs) -> None:
         self.id = None
         self.dimension = None
@@ -8,7 +8,7 @@ class SGData:
         raise NotImplementedError
 
 
-class Audio(SGData):
+class Audio(Label):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.sample_rate = None
@@ -18,7 +18,7 @@ class Audio(SGData):
         pass
 
 
-class CarnivalRTS(SGData):
+class CarnivalRTS(Label):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.frame_rate = None
@@ -28,7 +28,7 @@ class CarnivalRTS(SGData):
         pass
 
 
-class CarnivalSEG(SGData):
+class CarnivalSEG(Label):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
         self.labels = None
@@ -37,7 +37,7 @@ class CarnivalSEG(SGData):
         pass
 
 
-class String(SGData):
+class String(Label):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
@@ -45,7 +45,7 @@ class String(SGData):
         pass
 
 
-class Custom(SGData):
+class Custom(Label):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
